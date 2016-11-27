@@ -1,0 +1,15 @@
+I:/Documents/ECE552/Cache/unified_mem.v {1 {vlog -work work -stats=none I:/Documents/ECE552/Cache/unified_mem.v
+Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+-- Compiling module unified_mem
+
+Top level modules:
+	unified_mem
+
+} {} {}} I:/Documents/ECE552/Cache/cache.v {1 {vlog -work work -stats=none I:/Documents/ECE552/Cache/cache.v
+Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+-- Compiling module cache
+
+Top level modules:
+	cache
+
+} {} {}}
