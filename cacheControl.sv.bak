@@ -1,97 +1,106 @@
-module cacheControl(clk, rst_n, rdy, we, re, Ihit, Dhit, Ddirty, Irdy, Drdy);
+module cacheControl(clk, rst_n, rdy, dCache_or_iCache, write_or_read, Ihit, Dhit, Ddirty, dataSetDirty, Irdy, Drdy, currState);
 input clk, rst_n; 
-input we, re, rdy; // read and write enable
-input Ihit, Dhit; //specify if hit/miss in instruction and data cache respectively 
-output reg Ddirty; //only write to data cache so only need a dirty signal from data cache
+input dCache_or_iCache, write_or_read, rdy; // read and write enable
+input Ihit, Dhit, Ddirty; //specify if hit/miss in instruction and data cache respectively 
+output reg dataSetDirty; //only write to data cache so only need a dirty signal from data cache
 output reg Irdy, Drdy; //I cach and D cache ready signal.
+output reg [1:0] currState;
 
-reg [2:0] RWCounter;
-wire countDone;
-reg readAndWrite;
-
-typedef enum reg [3:0] {IDLE, WRITE, READ, WRITEBACK, READ_MISS, READ_DATA, WRITE_MISS} state_t;
+typedef enum reg [1:0] {CACHEACCESS, WRITEBACK, READ_MISS, WRITE_MISS} state_t;
 state_t state, nxt_state;
 
 always_ff @(posedge clk, negedge rst_n) begin
 	if(!rst_n)
-		state <= IDLE;
+		state <= CACHEACCESS;
 	else
 		state <= nxt_state;
 end
 
-always_ff @(posedge clk, negedge rst_n) begin
-	if((state == WRITE_MISS) || (state == READ_MISS) || (state == WRITEBACK)) begin
-		RWCounter <= RWCounter - 1;
-	end
-	else begin
-		RWCounter <= 5;
-	end
-end
-
-assign countDone = (RWCounter == 0) ? 1 : 0;
-
 always_comb begin
 	Irdy = 0;
 	Drdy = 0;
-	Ddirty = 0;
-	nxt_state = IDLE;
+	dataSetDirty = 0;
+	//nxt_state = CACHEACCESS;
+	currState = nxt_state;
 	case(state)
-		IDLE: begin
-			if(re || (re && we))
-				nxt_state = READ;
-			else
-				nxt_state = WRITE;
-		end
-		WRITE: begin
-			if(Dhit) begin
-				Drdy = 1;
-				Ddirty = 1;
-				nxt_state = IDLE;
+		CACHEACCESS: begin
+			if(dCache_or_iCache) begin
+				if(Dhit) begin
+					dataSetDirty = 1;
+					nxt_state = CACHEACCESS;
+				end
+				else if (!Dhit && Ddirty)  begin
+					nxt_state = WRITEBACK;
+					Drdy = 1;
+					Irdy = 1;
+				end
+				else if(write_or_read && !Dhit && !Ddirty) begin
+					nxt_state = WRITE_MISS;
+					Drdy = 1;
+					Irdy = 1;
+				end
+				else if (!write_or_read && !Dhit && !Ddirty) begin
+					nxt_state = READ_MISS;
+					Drdy = 1;
+					Irdy = 1;
+				end
+				else
+					nxt_state = CACHEACCESS;
 			end
-			else
-				nxt_state = WRITE_MISS;
+			else begin
+				if(Ihit) begin
+					nxt_state = CACHEACCESS;
+				end
+				else begin
+					nxt_state = READ_MISS;
+					Drdy = 1;
+					Irdy = 1;
+				end
+			end
 		end
 		WRITE_MISS: begin
-			if(countDone)
-				Ddirty = 1;
-				Drdy = 1; 
-				nxt_state = IDLE;
+			Irdy = 1;
+			Drdy = 1;
+			if(rdy) begin
+				dataSetDirty = 1;
+				nxt_state = CACHEACCESS;
+			end
 			else
 				nxt_state = WRITE_MISS;
 		end
-		/*WRITE_DATA: begin  //don't think WRITE_DATA is necessary
-			Ddirty = 1;
-			Drdy = 1;
-			nxt_state = IDLE;
-		end*/
-		READ: begin
-			if(Dhit) begin
-				Drdy = 1;
-				nxt_state = IDLE;
-			end
-			else if (Ihit) begin
-				Irdy = 1;
-				nxt_state = IDLE;
-			end
-			else if (!Dhit && Ddirty) 
-				nxt_state = WRITEBACK;
-			else 
-				nxt_state = READ_MISS;
-		end
 		WRITEBACK: begin
-			if(countDone)
-				nxt_state = READ_MISS;
+			Drdy = 1;
+			Irdy = 1;
+			if(rdy) begin	
+				if(write_or_read)
+					nxt_state = WRITE_MISS;
+				else
+					nxt_state = READ_MISS;
+			end
 			else 
 				nxt_state = WRITEBACK;
 		end
 		READ_MISS: begin
-			if(countDone)
-				nxt_state = READ_DATA;
+			Drdy = 1;
+			Irdy = 1;
+			if(rdy)	begin
+				if(dCache_or_iCache) begin
+					dataSetDirty = 1;
+					nxt_state = CACHEACCESS;
+				end
+				else begin
+					nxt_state = CACHEACCESS;
+				end
+			end
 			else 
 				nxt_state = READ_MISS;
 		end
-		READ_DATA: begin
-			
+		default: begin
+			Drdy = 0;
+			Irdy = 0;
+			dataSetDirty = 0;
+			nxt_state = CACHEACCESS;
+			currState = state;
 		end
 	endcase
 end

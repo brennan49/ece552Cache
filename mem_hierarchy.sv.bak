@@ -1,0 +1,136 @@
+module mem_hierarchy(clk, rst_n, i_addr, d_addr, instr, i_rdy, d_rdy, re, we, wrt_data, rd_data);
+	input clk, rst_n, re, we;
+	input [15:0] i_addr, d_addr, wrt_data;
+	output reg [15:0] instr, rd_data;
+	output i_rdy, d_rdy;
+
+
+	reg [1:0] currState;
+	///////////////////////////////
+	//Instruction cache variables//
+	///////////////////////////////
+	wire iHit, iWrite, iRead;
+	wire [63:0] inst_rdData;
+
+	////////////////////////
+	//Data cache variables//
+	////////////////////////
+	wire dHit, dDirty, dataSetDirty;
+	wire [63:0] data_rdData;
+	reg [63:0] data_wrData;
+	wire dWrite;
+	wire [7:0] tag;
+	wire [63:0] dataToWrite;
+
+	///////////////////////////
+	//unified_mem.v variables//
+	///////////////////////////
+	wire memReady, memWrite, memRead;
+	reg [15:0] memAddr;
+	wire [63:0] memReadData;
+
+	//////////////////////////////
+	//Cache Controller variables//
+	//////////////////////////////
+	wire dCache_or_iCache; //if 1, data cache access.  If 0, instruction cache access.
+	wire write_or_read; //if 1, we are doing a write. If 0, we are doing a read.
+
+	//////////////////////////////////
+	//Instruction cache calculations//
+	//////////////////////////////////
+	always_comb begin
+		case(i_addr[1:0]) 
+			0: instr = inst_rdData[15:0];
+			1: instr = inst_rdData[31:16];
+			2: instr = inst_rdData[47:32];
+			3: instr = inst_rdData[63:48];
+		endcase
+	end
+	//2'b00 = CACHEACCES
+	//2'b01 = WRITEBACK
+	//2'b10 = READ_MISS
+	//2'b11 = WRITE_MISS
+
+	////////////////////////////////////////////////////////////////////////////
+	//Determine re and we for instruction cache,data cache, and unified memory//
+	////////////////////////////////////////////////////////////////////////////
+	assign iWrite = (currState == 2'b10);
+	assign iRead = ~iWrite;
+	assign dWrite = ((currState == 2'b00) & we) ? 1 : 0;
+	assign memWrite = ((currState == 2'b01)) ? 1 : 0;
+	assign memRead = (currState == 2'b10 || currState == 2'b11) ? 1 : 0; 
+
+	/////////////////////////
+	//I-cache Instantiation//
+	/////////////////////////
+	cache i_cache(.clk(clk), .rst_n(rst_n), .addr(i_addr[15:2]), .wr_data(memReadData), .wdirty(/*don't need*/), 
+		      .we(iWrite), .re(iRead), .rd_data(inst_rdData), .tag_out(/*don't need*/), .hit(iHit), .dirty(/*don't need*/));
+
+
+	///////////////////////////
+	//Data cache calculations//
+	///////////////////////////
+	always_comb begin
+		if(dHit) begin
+			case(d_addr[1:0])
+				0: data_wrData = {data_rdData[63:16], wrt_data};
+				1: data_wrData = {data_rdData[63:32], wrt_data, data_rdData[15:0]};
+				2: data_wrData = {data_rdData[63:48], wrt_data, data_rdData[31:0]};
+				3: data_wrData = {wrt_data, data_rdData[47:0]};
+			endcase
+		end
+	end
+	
+	always_comb begin
+		case(d_addr[1:0])
+			0: rd_data = data_rdData[15:0];
+			1: rd_data = data_rdData[31:16];
+			2: rd_data = data_rdData[47:32];
+			3: rd_data = data_rdData[63:48];
+		endcase
+	end
+
+	/////////////////////////
+	//D-cache Instantiation//
+	/////////////////////////
+	assign dataToWrite = (currState == 2'b10 && dWrite) ? memReadData : data_wrData;
+
+	cache d_cache(.clk(clk), .rst_n(rst_n), .addr(d_addr[15:2]), .wr_data(dataToWrite), .wdirty(dataSetDirty), 
+		      .we(dWrite), .re(re | dWrite), .rd_data(data_rdData), .tag_out(tag), .hit(dHit), .dirty(dDirty));
+
+
+	/////////////////////////////////
+	//Cache Controller Calculations//
+	/////////////////////////////////
+	assign dCache_or_iCache = ((re == 1) || (dWrite == 1)) ? 1 : 0; 
+	assign write_or_read = ((dWrite == 1) || (iWrite == 1)) ? 1 : 0;
+
+	//////////////////////////////////
+	//Cache Controller Instantiation//
+	//////////////////////////////////
+	cacheControl Controller(.clk(clk), .rst_n(rst_n), .rdy(memReady), .dCache_or_iCache(dCache_or_iCache), .write_or_read(write_or_read), 
+				.Ihit(iHit), .Dhit(dHit), .Ddirty(dDirty), .dataSetDirty(dataSetDirty), .Irdy(i_rdy), .Drdy(d_rdy), .currState(currState));
+
+
+	///////////////////////////////
+	//Unified Memory Calculations//
+	///////////////////////////////
+	always_comb begin
+		if(currState == 2'b01)
+			memAddr = {tag,d_addr[7:0]};
+		else if((currState == 2'b10 && (we || re)) || (currState = 2'b11 && (we || re)))
+			memAddr = d_addr[15:2];
+		else if(currState == 2'b10)
+			memAddr = i_addr[15:2];
+		else 
+			memAddr = d_addr[15:2];
+	end
+
+	//assign memmAddr = (currState == 2'b01) ? {{tag},{d_addr[7:0]}} : ((currState == 2'b10 && (we || re)) || (currState == 2'b11)) ? d_addr[15:2] : i_addr[15:2];
+	
+	////////////////////////////////
+	//unified memory instantiation//
+	////////////////////////////////
+	unified_mem mainMemory(.clk(clk), .rst_n(rst_n), .addr(memAddr), .re(memRead), .we(memWrite), .wdata(data_rdData), .rd_data(memReadData), .rdy(memReady));
+
+endmodule

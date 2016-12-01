@@ -8,91 +8,587 @@ z2
 !i10f 100
 cModel Technology
 dC:/ProgramData/App-V/2191B702-5279-4048-91BA-BCF8F2A20B49/3C5B5D32-C303-48A2-8738-F357EDE80167/Root/examples
+vALU
+Z0 V`JN@9S9cnhjKRR_L]QIcM3
+r1
+!s85 0
+31
+!i10b 1
+!s100 a?3:QehTT_NfT6_0MU@8H2
+IH8kLEXFFPGib_4UPaQz?g3
+Z1 d//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache
+w1478724196
+8//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/ALU.v
+F//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/ALU.v
+L0 1
+Z2 OE;L;10.3c;59
+!s108 1480629069.907000
+!s107 //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/ALU.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/ALU.v|
+!i113 0
+Z3 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+n@a@l@u
+vALU_tb
+!s110 1480629070
+!i10b 1
+!s100 dN0f_a1MOo6;WLWmE7Fbf0
+Ibe9cRLoV1_N;UbX`z_HRS3
+R0
+R1
+w1478724198
+8//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/ALU_tb.v
+F//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/ALU_tb.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1480629070.269000
+!s107 //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/ALU_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/ALU_tb.v|
+!i113 0
+R3
+n@a@l@u_tb
+vbarrelShifter
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 D?[U0FTEMj9e;TV>l]AdF0
+ITo3ic=hnzHK^SUN=NT?Gl1
+R1
+w1478724200
+8//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/barrelShifter.v
+F//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/barrelShifter.v
+L0 1
+R2
+!s108 1480629070.626000
+!s107 //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/barrelShifter.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/barrelShifter.v|
+!i113 0
+R3
+nbarrel@shifter
+vbranchLUT
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 f0TC>4j<nFL;L58k?VD781
+Ie38c3dN[UN=jO1SYcnkZc3
+R1
+w1478724202
+8//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/branchLUT.v
+F//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/branchLUT.v
+L0 1
+R2
+!s108 1480629071.072000
+!s107 //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/branchLUT.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/branchLUT.v|
+!i113 0
+R3
+nbranch@l@u@t
 vcache
-Z0 !s110 1480275380
+R0
+r1
+!s85 0
+31
 !i10b 1
 !s100 Km1iMZQB>JTKJ;A46eX;l0
-I=5bD]RTzFEkdoEXc0GhgN1
-Z1 VDg1SIo80bB@j0V0VzS_@n1
-Z2 dI:/Documents/ECE552/Cache
-w1479580974
-8I:/Documents/ECE552/Cache/cache.v
-FI:/Documents/ECE552/Cache/cache.v
-L0 1
-Z3 OV;L;10.4d;61
-r1
-!s85 0
-31
-!s108 1480275379.000000
-!s107 I:/Documents/ECE552/Cache/cache.v|
-!s90 -reportprogress|300|-work|work|-stats=none|I:/Documents/ECE552/Cache/cache.v|
-!i113 1
-Z4 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-vcacheControl
-Z5 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
-!s110 1480280073
-!i10b 1
-!s100 m4PCV_mR_1jD?7<WbVBCQ0
-I`QLXDQXI<0cb:>C65ocTa3
+IH6oElR4oJ1S8V=QYWH:;X2
 R1
-Z6 !s105 cacheControl_sv_unit
-S1
-R2
-w1480280071
-Z7 8I:/Documents/ECE552/Cache/cacheControl.sv
-Z8 FI:/Documents/ECE552/Cache/cacheControl.sv
+w1480544954
+8//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/cache.v
+F//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/cache.v
 L0 1
+R2
+!s108 1480629067.653000
+!s107 //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/cache.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/cache.v|
+!i113 0
 R3
+vcacheControl
+Z4 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
+R0
 r1
 !s85 0
 31
-!s108 1480280072.000000
-!s107 I:/Documents/ECE552/Cache/cacheControl.sv|
-Z9 !s90 -reportprogress|300|-work|work|-sv|-stats=none|I:/Documents/ECE552/Cache/cacheControl.sv|
-!i113 1
-Z10 o-work work -sv -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!i10b 1
+!s100 _IDZTd[NWOd?hn9lZW=^^1
+Ib^50HzRb[4jzcDh:@3;CW2
+Z5 !s105 cacheControl_sv_unit
+S1
+R1
+w1480631067
+8//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/cacheControl.sv
+F//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/cacheControl.sv
+L0 1
+R2
+!s108 1480631068.497000
+!s107 //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/cacheControl.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/cacheControl.sv|
+!i113 0
+Z6 o-work work -sv -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 ncache@control
-vDonaldJTrumpPOTUS
-R5
+vclockGenerator
 R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 UMYW5noVkzY4<B`Ucf`^C2
+InCh2T<T65fMllEYQa4]d:3
+R1
+Z7 w1478724204
+8//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/clockGenerator.v
+F//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/clockGenerator.v
+L0 1
+R2
+!s108 1480629071.410000
+!s107 //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/clockGenerator.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/clockGenerator.v|
+!i113 0
+R3
+nclock@generator
+vcontrol
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 c@Y^<4n2J@E2S9F_BISk?2
+I8kLjZnJ[VR@Z<KlD2WA]n3
+R1
+R7
+8//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/control.v
+F//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/control.v
+L0 1
+R2
+!s108 1480629071.742000
+!s107 //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/control.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/control.v|
+!i113 0
+R3
+vcpu
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 mhm6GTaf7Sfhg:[k7jlCL3
+IIAG]d>kYnmLF5a2I7YgRj3
+R1
+w1480628460
+8//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/cpu.v
+F//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/cpu.v
+L0 1
+R2
+!s108 1480629072.148000
+!s107 //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/cpu.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/cpu.v|
+!i113 0
+R3
+vcpu_tb
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 mlCTOe`_]e45cAH>Jg<UZ0
+I97_4zjVMnTia`Xi6gA_cU2
+R1
+w1478724208
+8//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/cpu_tb.v
+F//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/cpu_tb.v
+L0 1
+R2
+!s108 1480629072.473000
+!s107 //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/cpu_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/cpu_tb.v|
+!i113 0
+R3
+vDM
+!s110 1480629072
+!i10b 1
+!s100 Jn_:oJCfE0edd9_@?bmV00
+Iam:7IMkJ[n1M8iZO6AVo22
+R0
+R1
+w1478724210
+8//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/data_mem.v
+F//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/data_mem.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1480629072.844000
+!s107 //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/data_mem.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/data_mem.v|
+!i113 0
+R3
+n@d@m
+vDonaldJTrumpPOTUS
+DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
+!s110 1480275380
 !i10b 1
 !s100 XI?eBL@N?z_46:VOUX?1=3
 I0_QFQmTIQhkQ9hMG:_BP80
-R1
-R6
+VDg1SIo80bB@j0V0VzS_@n1
+R5
 S1
-R2
+dI:/Documents/ECE552/Cache
 w1479847089
-R7
-R8
+8I:/Documents/ECE552/Cache/cacheControl.sv
+FI:/Documents/ECE552/Cache/cacheControl.sv
 L0 1
-R3
+OV;L;10.4d;61
 r1
 !s85 0
 31
 !s108 1480275380.000000
 !s107 I:/Documents/ECE552/Cache/cacheControl.sv|
-R9
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|I:/Documents/ECE552/Cache/cacheControl.sv|
 !i113 1
-R10
+R6
 n@donald@j@trump@p@o@t@u@s
-vunified_mem
-!s110 1480275379
-!i10b 1
-!s100 f7NWVAU^dFb?Yz@d:dAh32
-I=0a?;n`jEG8OGUd08d4h[0
-R1
-R2
-w1479580975
-8I:/Documents/ECE552/Cache/unified_mem.v
-FI:/Documents/ECE552/Cache/unified_mem.v
-L0 2
-R3
+vEX_MEM_Reg
+R0
 r1
 !s85 0
 31
-!s108 1480275378.000000
-!s107 I:/Documents/ECE552/Cache/unified_mem.v|
-!s90 -reportprogress|300|-work|work|-stats=none|I:/Documents/ECE552/Cache/unified_mem.v|
-!i113 1
+!i10b 1
+!s100 Ud=ZLETm4CPlek?jXa7>c0
+IK0;Z34;6b5aXDohIQS7OR3
+R1
+w1478732193
+8//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/EX_MEM_Reg.v
+F//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/EX_MEM_Reg.v
+L0 1
+R2
+!s108 1480629073.245000
+!s107 //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/EX_MEM_Reg.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/EX_MEM_Reg.v|
+!i113 0
+R3
+n@e@x_@m@e@m_@reg
+vflagRegister
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 BIY]FMR:8:<Jc[WdoQbdc2
+ID[57HCAgbBflkaK]Yjc[J3
+R1
+w1478724214
+8//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/flagRegister.v
+F//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/flagRegister.v
+L0 1
+R2
+!s108 1480629073.575000
+!s107 //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/flagRegister.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/flagRegister.v|
+!i113 0
+R3
+nflag@register
+vfwdUnit
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 `=Jck860T=BPU[SLjTL]f1
+I13_cMJc8a?a<]?5S5zVO]2
+R1
+w1478733737
+8//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/fwdUnit.v
+F//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/fwdUnit.v
+L0 1
+R2
+!s108 1480629073.935000
+!s107 //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/fwdUnit.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/fwdUnit.v|
+!i113 0
+R3
+nfwd@unit
+vhzdDetectionUnit
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 4E1^FkI`@Jz0Y<1fNh1@O0
+IePDO9YDY_kYV0d74mK`YF2
+R1
+Z8 w1478724218
+8//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/hzdDetectionUnit.v
+F//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/hzdDetectionUnit.v
+L0 1
+R2
+!s108 1480629074.447000
+!s107 //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/hzdDetectionUnit.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/hzdDetectionUnit.v|
+!i113 0
+R3
+nhzd@detection@unit
+vhzdLUT
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 4SQgoicZW>2aSN2NJHE[i2
+I9SHXjNNmkHZPe<Fzm7o]`1
+R1
+R8
+8//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/hzdLUT.v
+F//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/hzdLUT.v
+L0 1
+R2
+!s108 1480629074.810000
+!s107 //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/hzdLUT.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/hzdLUT.v|
+!i113 0
+R3
+nhzd@l@u@t
+vID_EX_Reg
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 EeFC>`f3PP>DjFTC8OWR02
+IZ`3^0^2PSlMRUdQEY1cD?3
+R1
+w1478734662
+8//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/ID_EX_Reg.v
+F//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/ID_EX_Reg.v
+L0 1
+R2
+!s108 1480629075.174000
+!s107 //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/ID_EX_Reg.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/ID_EX_Reg.v|
+!i113 0
+R3
+n@i@d_@e@x_@reg
+vIF_ID_Reg
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 Hz@e4:[:Xa<WPV6P><]k;2
+IH^:QZJieDkOg?J[^GGN2g2
+R1
+w1478724222
+8//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/IF_ID_Reg.v
+F//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/IF_ID_Reg.v
+L0 1
+R2
+!s108 1480629075.524000
+!s107 //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/IF_ID_Reg.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/IF_ID_Reg.v|
+!i113 0
+R3
+n@i@f_@i@d_@reg
+vIM
+!s110 1480629076
+!i10b 1
+!s100 nX3HYRLW[Y2]8e_`VIhKK2
+I^TDH5nEOlGgD[OWl8T;W^3
+R0
+R1
+w1478821244
+8//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/instr_mem.v
+F//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/instr_mem.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1480629075.864000
+!s107 //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/instr_mem.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/instr_mem.v|
+!i113 0
+R3
+n@i@m
+vmem_hierarchy
 R4
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 UHVRXIS;aSZbT0YS4Y@P90
+IbdcX`53aS4=djzk21?`ll1
+!s105 mem_hierarchy_sv_unit
+S1
+R1
+w1480630011
+8//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/mem_hierarchy.sv
+F//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/mem_hierarchy.sv
+L0 1
+R2
+!s108 1480630019.986000
+!s107 //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/mem_hierarchy.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/mem_hierarchy.sv|
+!i113 0
+R6
+vMEM_WB_Reg
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 3<no880K^I@E@g?6n:3GB3
+IWd50Mn`Z<7`]AkKS5K<QD0
+R1
+w1478732190
+8//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/MEM_WB_Reg.v
+F//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/MEM_WB_Reg.v
+L0 1
+R2
+!s108 1480629076.436000
+!s107 //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/MEM_WB_Reg.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/MEM_WB_Reg.v|
+!i113 0
+R3
+n@m@e@m_@w@b_@reg
+vmux16_4
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 8ZbO7iU1U1J=a?4[=`GG?0
+I6czl[koM<Zo7XedZa9zc_3
+R1
+w1478724230
+8//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/mux16_4.v
+F//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/mux16_4.v
+L0 1
+R2
+!s108 1480629076.766000
+!s107 //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/mux16_4.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/mux16_4.v|
+!i113 0
+R3
+vmux64_6
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 S[oWM7mhmCWd?O[MnC<gG2
+ITLG2dZ`ezgWKSGo>;G>EQ3
+R1
+w1478724232
+8//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/mux64_6.v
+F//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/mux64_6.v
+L0 1
+R2
+!s108 1480629077.234000
+!s107 //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/mux64_6.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/mux64_6.v|
+!i113 0
+R3
+vPC
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 azMFJgO<>>0lzDFUBO;WI0
+I]B=kCO66n6<_[?didAYEU0
+R1
+Z9 w1478724234
+8//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/PC.v
+F//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/PC.v
+L0 1
+R2
+!s108 1480629077.534000
+!s107 //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/PC.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/PC.v|
+!i113 0
+R3
+n@p@c
+vrf
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 5NDVP@:L[S64R3knV=Dad3
+Im_hKXzni^:KWQ^=zjd_P:0
+R1
+R9
+8//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/rf_pipelined.v
+F//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/rf_pipelined.v
+L0 1
+R2
+!s108 1480629078.094000
+!s107 //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/rf_pipelined.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/rf_pipelined.v|
+!i113 0
+R3
+vsatAdder
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 S0]iC3CVTz1TcEfI;GD;E3
+IlX<3DgEnndjVL@Do;]dRO1
+R1
+Z10 w1478724236
+8//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/satAdder.v
+F//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/satAdder.v
+L0 1
+R2
+!s108 1480629078.454000
+!s107 //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/satAdder.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/satAdder.v|
+!i113 0
+R3
+nsat@adder
+vsatArith_par
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 QUoAc_oFLe`IC]2HMZN0U2
+IZnbKk2[Ll^J@dDzL5IZ_T3
+R1
+R10
+8//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/satArith_par.v
+F//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/satArith_par.v
+L0 1
+R2
+!s108 1480629069.548000
+!s107 //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/satArith_par.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/satArith_par.v|
+!i113 0
+R3
+nsat@arith_par
+vunified_mem
+R0
+r1
+!s85 0
+31
+!i10b 1
+!s100 =LZ<egH7m<9N@Ed_cO^l01
+IUT<g:fXmf56Vi3H@_5[l;3
+R1
+w1480620933
+8//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/unified_mem.v
+F//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/unified_mem.v
+L0 2
+R2
+!s108 1480629067.203000
+!s107 //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/unified_mem.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/unified_mem.v|
+!i113 0
+R3

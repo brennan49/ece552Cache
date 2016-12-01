@@ -1,15 +1,192 @@
-I:/Documents/ECE552/Cache/unified_mem.v {1 {vlog -work work -stats=none I:/Documents/ECE552/Cache/unified_mem.v
-Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+//userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/instr_mem.v {1 {vlog -work work -vopt -stats=none //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/instr_mem.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module IM
+
+Top level modules:
+	IM
+
+} {} {}} //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/ID_EX_Reg.v {1 {vlog -work work -vopt -stats=none //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/ID_EX_Reg.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module ID_EX_Reg
+
+Top level modules:
+	ID_EX_Reg
+
+} {} {}} //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/flagRegister.v {1 {vlog -work work -vopt -stats=none //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/flagRegister.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module flagRegister
+
+Top level modules:
+	flagRegister
+
+} {} {}} //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/IF_ID_Reg.v {1 {vlog -work work -vopt -stats=none //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/IF_ID_Reg.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module IF_ID_Reg
+
+Top level modules:
+	IF_ID_Reg
+
+} {} {}} //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/EX_MEM_Reg.v {1 {vlog -work work -vopt -stats=none //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/EX_MEM_Reg.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module EX_MEM_Reg
+
+Top level modules:
+	EX_MEM_Reg
+
+} {} {}} //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/control.v {1 {vlog -work work -vopt -stats=none //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/control.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module control
+
+Top level modules:
+	control
+
+} {} {}} //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/ALU.v {1 {vlog -work work -vopt -stats=none //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/ALU.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/PC.v {1 {vlog -work work -vopt -stats=none //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/PC.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module PC
+
+Top level modules:
+	PC
+
+} {} {}} //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/hzdLUT.v {1 {vlog -work work -vopt -stats=none //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/hzdLUT.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module hzdLUT
+
+Top level modules:
+	hzdLUT
+
+} {} {}} //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/ALU_tb.v {1 {vlog -work work -vopt -stats=none //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/ALU_tb.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module ALU_tb
+
+Top level modules:
+	ALU_tb
+
+} {} {}} //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/mem_hierarchy.sv {2 {vlog -work work -vopt -sv -stats=none //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/mem_hierarchy.sv
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module mem_hierarchy
+** Warning: //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/mem_hierarchy.sv(119): (vlog-2182) 'currState' might be read before written in always_comb or always @* block.
+
+
+Top level modules:
+	mem_hierarchy
+
+} {} {}} //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/cpu.v {1 {vlog -work work -vopt -stats=none //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/cpu.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module cpu
+
+Top level modules:
+	cpu
+
+} {} {}} //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/satAdder.v {1 {vlog -work work -vopt -stats=none //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/satAdder.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module satAdder
+
+Top level modules:
+	satAdder
+
+} {} {}} //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/data_mem.v {1 {vlog -work work -vopt -stats=none //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/data_mem.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module DM
+
+Top level modules:
+	DM
+
+} {} {}} //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/rf_pipelined.v {1 {vlog -work work -vopt -stats=none //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/rf_pipelined.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module rf
+
+Top level modules:
+	rf
+
+} {} {}} //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/mux64_6.v {1 {vlog -work work -vopt -stats=none //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/mux64_6.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module mux64_6
+
+Top level modules:
+	mux64_6
+
+} {} {}} //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/fwdUnit.v {1 {vlog -work work -vopt -stats=none //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/fwdUnit.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module fwdUnit
+
+Top level modules:
+	fwdUnit
+
+} {} {}} //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/unified_mem.v {1 {vlog -work work -vopt -stats=none //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/unified_mem.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 -- Compiling module unified_mem
 
 Top level modules:
 	unified_mem
 
-} {} {}} I:/Documents/ECE552/Cache/cache.v {1 {vlog -work work -stats=none I:/Documents/ECE552/Cache/cache.v
-Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+} {} {}} //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/satArith_par.v {1 {vlog -work work -vopt -stats=none //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/satArith_par.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module satArith_par
+
+Top level modules:
+	satArith_par
+
+} {} {}} //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/branchLUT.v {1 {vlog -work work -vopt -stats=none //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/branchLUT.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module branchLUT
+
+Top level modules:
+	branchLUT
+
+} {} {}} //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/clockGenerator.v {1 {vlog -work work -vopt -stats=none //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/clockGenerator.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module clockGenerator
+
+Top level modules:
+	clockGenerator
+
+} {} {}} //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/mux16_4.v {1 {vlog -work work -vopt -stats=none //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/mux16_4.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module mux16_4
+
+Top level modules:
+	mux16_4
+
+} {} {}} //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/MEM_WB_Reg.v {1 {vlog -work work -vopt -stats=none //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/MEM_WB_Reg.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module MEM_WB_Reg
+
+Top level modules:
+	MEM_WB_Reg
+
+} {} {}} //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/cache.v {1 {vlog -work work -vopt -stats=none //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/cache.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
 -- Compiling module cache
 
 Top level modules:
 	cache
+
+} {} {}} //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/hzdDetectionUnit.v {1 {vlog -work work -vopt -stats=none //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/hzdDetectionUnit.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module hzdDetectionUnit
+
+Top level modules:
+	hzdDetectionUnit
+
+} {} {}} //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/cpu_tb.v {1 {vlog -work work -vopt -stats=none //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/cpu_tb.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module cpu_tb
+
+Top level modules:
+	cpu_tb
+
+} {} {}} //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/barrelShifter.v {1 {vlog -work work -vopt -stats=none //userspace.cae.wisc.edu/people/d/dmbrennan/Documents/ECE552/Cache/barrelShifter.v
+Model Technology ModelSim SE vlog 10.3c Compiler 2014.07 Jul 19 2014
+-- Compiling module barrelShifter
+
+Top level modules:
+	barrelShifter
 
 } {} {}}
